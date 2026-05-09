@@ -1,0 +1,8 @@
+.vs/
+.vscode/
+*.suo
+*.user
+*.sln.docstates
+
+.DS_Store
+Thumbs.db
