@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>VR CAD Visualisation System | Bruce Jennings</title>
+
+    <meta name="description"
+          content="Case study for a C++/Qt CAD viewer using VTK and OpenVR to visualise STL assemblies in desktop and VR environments." />
+
+    <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="nav">
+            <a href="../index.html#home" class="logo">Bruce Jennings</a>
+
+            <div class="nav-links">
+                <a href="../index.html#projects">Projects</a>
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#cv">CV</a>
+                <a href="../index.html#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="project-hero">
+            <a href="../index.html#projects" class="back-link">← Back to projects</a>
+
+            <p class="eyebrow">C++ · Qt · VTK · OpenVR · CMake</p>
+
+            <h1>VR CAD Visualisation System</h1>
+
+            <p class="hero-text">
+                A C++/Qt desktop application using VTK and OpenVR to load, inspect, manipulate, and view STL CAD models
+                in both desktop and virtual reality environments.
+            </p>
+
+            <div class="hero-actions">
+                <a href="https://github.com/br-je/2025_group_8" target="_blank" rel="noopener noreferrer" class="button primary">
+                    View GitHub Repository
+                </a>
+                <a href="https://br-je.github.io/2025_group_8/" target="_blank" rel="noopener noreferrer" class="button secondary">
+                    View Documentation
+                </a>
+            </div>
+        </section>
+
+        <section class="section project-showcase">
+            <img src="../assets/images/projects/vr-cad/vr-cad-ui.jpg"
+                 alt="Desktop interface of the VR CAD Visualisation System"
+                 class="case-study-image large" />
+
+            <div class="image-grid">
+                <img src="../assets/images/projects/vr-cad/vr-cad-ui.jpg"
+                     alt="Qt and VTK desktop CAD viewer interface"
+                     class="case-study-image" />
+
+                <img src="../assets/images/projects/vr-cad/vr-cad-vr-view.jpg"
+                     alt="VR view of CAD models rendered using OpenVR"
+                     class="case-study-image" />
+            </div>
+        </section>
+
+        <section class="section case-study-layout">
+            <article class="case-study-main">
+                <h2>Overview</h2>
+                <p>
+                    This project was developed as a group engineering software project to create a CAD visualisation
+                    system with both desktop and VR support. The application uses Qt for the interface, VTK for
+                    rendering and model processing, and OpenVR for immersive visualisation.
+                </p>
+
+                <h2>My Contribution</h2>
+                <p>
+                    I worked across the application structure, model handling, VR rendering pipeline, live GUI-to-VR
+                    updates, documentation, and packaging. The project involved both software engineering and practical
+                    debugging to make the desktop and VR views behave reliably.
+                </p>
+
+                <h2>Key Features</h2>
+                <ul class="case-study-list">
+                    <li>Recursive STL folder loading for CAD assemblies.</li>
+                    <li>Tree-based model structure for selecting and managing parts.</li>
+                    <li>Colour and visibility controls with live updates.</li>
+                    <li>VTK shrink and clip filters for model inspection.</li>
+                    <li>Dedicated VR render thread using OpenVR.</li>
+                    <li>Live GUI-to-VR updates without restarting the VR session.</li>
+                    <li>Windows installer packaging and Doxygen documentation through GitHub Pages.</li>
+                </ul>
+
+                <h2>Engineering Challenges</h2>
+                <p>
+                    One of the main challenges was keeping the desktop and VR rendering pipelines stable while allowing
+                    live changes from the GUI. The project required careful handling of VTK actors, model properties,
+                    threading, shutdown order, and VR restart behaviour.
+                </p>
+
+                <h2>What I Learned</h2>
+                <p>
+                    This project strengthened my experience with C++ application structure, graphical user interfaces,
+                    rendering pipelines, technical documentation, Git/GitHub workflow, and debugging complex software
+                    systems across desktop and VR environments.
+                </p>
+            </article>
+
+            <aside class="case-study-sidebar">
+                <div class="sidebar-card">
+                    <h3>Technical Stack</h3>
+                    <div class="tag-list compact">
+                        <span>C++</span>
+                        <span>Qt</span>
+                        <span>VTK</span>
+                        <span>OpenVR</span>
+                        <span>CMake</span>
+                        <span>Git</span>
+                        <span>Doxygen</span>
+                        <span>GitHub Pages</span>
+                    </div>
+                </div>
+
+                <div class="sidebar-card">
+                    <h3>Project Type</h3>
+                    <p>Group engineering software project</p>
+                </div>
+
+                <div class="sidebar-card">
+                    <h3>Focus Areas</h3>
+                    <p>CAD visualisation, VR rendering, C++ software engineering, GUI development, documentation.</p>
+                </div>
+            </aside>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 Bruce Jennings. Built with HTML, CSS, and GitHub Pages.</p>
+    </footer>
+</body>
+</html>
