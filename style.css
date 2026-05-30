@@ -227,7 +227,7 @@ h3 {
     max-width: 100%;
     height: auto;
     aspect-ratio: 16 / 9;
-    object-fit: contain;
+    object-fit: cover;
     background: #111827;
     transition: transform 0.25s ease;
 }
