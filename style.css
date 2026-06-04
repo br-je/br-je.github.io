@@ -20,7 +20,8 @@ html {
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: var(--bg);
+    background: linear-gradient(rgba(31, 94, 255, 0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(31, 94, 255, 0.035) 1px, transparent 1px), var(--bg);
+    background-size: 42px 42px;
     color: var(--text);
     line-height: 1.6;
 }
@@ -53,6 +54,12 @@ a {
     letter-spacing: -0.02em;
 }
 
+.status-line {
+    color: var(--text);
+    font-weight: 700;
+    margin: -12px 0 28px;
+}
+
 .nav-links {
     display: flex;
     gap: 20px;
@@ -71,12 +78,38 @@ a {
 .hero {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 96px 24px 72px;
+    padding: 104px 24px 80px;
 }
 
 .hero-content {
-    max-width: 820px;
+    max-width: 860px;
+    position: relative;
 }
+
+    .hero-content::before {
+        content: "";
+        display: block;
+        width: 72px;
+        height: 4px;
+        background: var(--accent);
+        border-radius: 999px;
+        margin-bottom: 24px;
+    }
+
+.hero-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+    color: var(--muted);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+    .hero-stats span {
+        border-left: 3px solid var(--accent);
+        padding-left: 10px;
+    }
 
 .eyebrow {
     color: var(--accent);
@@ -235,6 +268,21 @@ h3 {
 .project-image-link:hover .project-image {
     transform: scale(1.03);
 }
+
+.project-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+    .project-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(31, 94, 255, 0.35);
+        box-shadow: 0 16px 40px rgba(23, 32, 51, 0.12);
+    }
 
 .featured-project {
     padding: 18px;
