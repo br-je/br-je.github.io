@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pulse Oximeter Prototype | Bruce Jennings</title>
+    <meta name="description" content="Engineering case study of an STM32 and FPGA pulse oximeter prototype involving signal acquisition, UART communication and laboratory testing." />
+    <link rel="stylesheet" href="../style.css?v=6" />
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav">
+            <a href="../index.html#home" class="logo">Bruce Jennings</a>
+            <div class="nav-links">
+                <a href="../index.html#projects">Projects</a>
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#cv">CV</a>
+                <a href="../index.html#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="project-hero">
+            <a href="../index.html#projects" class="back-link">← Back to projects</a>
+            <p class="eyebrow">STM32 · FPGA · ADC/DMA · UART · Signal Acquisition</p>
+            <h1>Pulse Oximeter Prototype</h1>
+            <p class="hero-text">
+                A group embedded-systems project investigating physiological signal acquisition and monitoring
+                using STM32 microcontroller peripherals, UART communication, and FPGA subsystem development.
+            </p>
+        </section>
+        <section class="section project-showcase">
+            <!-- Replace the filename below with the actual photograph in your pulse-oximeter folder. -->
+            <img src="../assets/images/projects/pulse-oximeter/pulse-oximeter.jpg"
+                 alt="Pulse oximeter prototype and electronic test setup"
+                 class="case-study-image large" />
+        </section>
+        <section class="section case-study-layout">
+            <article class="case-study-main">
+                <h2>Overview</h2>
+                <p>
+                    This group project explored an embedded pulse oximeter prototype, combining microcontroller-based
+                    signal acquisition with communications and FPGA-related subsystem work. The emphasis was on
+                    practical implementation, monitoring, integration, and laboratory testing.
+                </p>
+
+                <h2>Technical Approach</h2>
+                <p>
+                    The project involved STM32 peripherals including ADC and DMA for sampled data acquisition,
+                    UART for communication, and FPGA development using Quartus Prime. Oscilloscope observations
+                    supported testing and debugging during development.
+                </p>
+
+                <h2>Key Engineering Elements</h2>
+                <ul class="case-study-list">
+                    <li>STM32-based analogue signal acquisition using ADC and DMA.</li>
+                    <li>UART communication as part of the embedded integration work.</li>
+                    <li>FPGA subsystem development using Quartus Prime.</li>
+                    <li>Laboratory signal observation and debugging with an oscilloscope.</li>
+                </ul>
+
+                <h2>My Contribution</h2>
+                <p>
+                    I primarily developed the communication and signal-processing components, handling the transfer
+                    of acquired pulse data and processing it into readable measurements displayed through a command-line interface.
+
+                    This included integrating the SpO₂ calculation, managing signal conditioning behaviour, 
+                    and implementing measures to improve reading stability during finger placement.
+                </p>
+
+                <h2>Engineering Challenges</h2>
+                <p>
+                    A key challenge was integrating the SpO₂ calculation with the signal-conditioning pipeline. The high-pass filter introduced 
+                    a settling period, during which the DC offset affected the reliability of initial measurements.
+                    I addressed this by delaying calculations until the filter output had stabilised.
+
+                    Another challenge was sudden signal disturbances caused by finger placement. 
+                    I implemented a plausibility check that detected changes exceeding a defined threshold and rejected these transient readings, 
+                    allowing the system to display a subsequent valid measurement instead.
+                </p>
+
+                <h2>What I Learned</h2>
+                <p>
+                    The project strengthened my understanding of microcontroller peripherals, data acquisition,
+                    serial communication, FPGA workflows, and verification of embedded systems through physical testing.
+                </p>
+            </article>
+            <aside class="case-study-sidebar">
+                <div class="sidebar-card">
+                    <h3>Technical Stack</h3>
+                    <div class="tag-list compact">
+                        <span>STM32</span><span>C</span><span>ADC</span><span>DMA</span>
+                        <span>UART</span><span>FPGA</span><span>Quartus Prime</span><span>Oscilloscope</span>
+                    </div>
+                </div>
+                <div class="sidebar-card">
+                    <h3>Project Type</h3>
+                    <p>Group embedded systems and medical technology prototype</p>
+                </div>
+                <div class="sidebar-card">
+                    <h3>Focus Areas</h3>
+                    <p>Embedded electronics, signal acquisition, hardware-software integration, communication, and laboratory testing.</p>
+                </div>
+                <div class="sidebar-card">
+                    <h3>Project Scope</h3>
+                    <p>Academic engineering prototype; not a clinically validated medical device.</p>
+                </div>
+            </aside>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <p>© 2026 Bruce Jennings. Built with HTML, CSS, and GitHub Pages.</p>
+    </footer>
+</body>
+</html>
